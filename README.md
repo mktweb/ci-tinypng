@@ -48,7 +48,7 @@ urlCompress($url, $new_path)
 ```
 
 ### Resize Image
-NOTE: to 'scale' mathod, enter with $width OR $heigh value = 0
+NOTE: to 'scale' method, enter with $width OR $heigh value = 0
 
 EXAMPLE: 
 fileResize($path, $new_path, 'scale', 150, 0);
