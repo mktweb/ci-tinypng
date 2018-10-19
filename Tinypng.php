@@ -32,7 +32,7 @@ class Tinypng
 	}
 
 	/**
-	 * Test a connection with API
+	 * Test connection with API
 	 */
 
 	public function testConnection()
@@ -48,7 +48,7 @@ class Tinypng
 	}
 
 	/**
-	 * Get a number of compressed files
+	 * Get number of compressed files
 	 */
 
 	public function countCompressed()
@@ -60,7 +60,7 @@ class Tinypng
 	/**
 	 * Compress image and save in server
 	 * $path (string) original image locate
-	 * $new_path (string) locate with image as saved
+	 * $new_path (string) location where image was saved
 	 */
 
 	public function fileCompress($path, $new_path)
@@ -103,7 +103,7 @@ class Tinypng
 	/**
 	 * Compress image from URL and save in server
 	 * $url (string) original image URL
-	 * $new_path (string) locate with image as saved
+	 * $new_path (string) location where image was saved
 	 */
 
 	public function urlCompress($url, $new_path)
@@ -125,10 +125,10 @@ class Tinypng
 	/**
 	 * Resize image and save in server
 	 * $path (string) original image locate
-	 * $new_path (string) locate with image as saved
+	 * $new_path (string) location where image was saved
 	 * $method (string) method of resize image: 'scale', 'fit', 'cover', 'thumb' 
-	 * $width (integer) width of a new image
-	 * $height (integer) height of a new image
+	 * $width (integer) width of new image
+	 * $height (integer) height of new image
 	 */
 
 	public function fileResize($path, $new_path, $method, $width, $height)
@@ -169,8 +169,8 @@ class Tinypng
 	 * Resize image and store in buffer
 	 * $path (string) original image locate
 	 * $method (string) method of resize image: 'scale', 'fit', 'cover', 'thumb' 
-	 * $width (integer) width of a new image
-	 * $height (integer) height of a new image
+	 * $width (integer) width of new image
+	 * $height (integer) height of new image
 	 */
 
 	public function bufferResize($path, $method, $width, $height)
@@ -210,10 +210,10 @@ class Tinypng
 	/**
 	 * Resize image from URL and save in server
 	 * $url (string) original image URL
-	 * $new_path (string) locate with image as saved
+	 * $new_path (string) location where image was saved
 	 * $method (string) method of resize image: 'scale', 'fit', 'cover', 'thumb' 
-	 * $width (integer) width of a new image
-	 * $height (integer) height of a new image
+	 * $width (integer) width of new image
+	 * $height (integer) height of new image
 	 */
 
 	public function urlResize($url, $new_path, $method, $width, $height)
