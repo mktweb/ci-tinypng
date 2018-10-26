@@ -12,7 +12,7 @@ Library from CodeIgniter to extends tinypng
 ## How to Use
 * Call library in your Controller
 ```php
-$this->load->library('tinypng', array('api_key' => $YOUR_API_KEY));
+$this->load->library('tinypng', array('api_key' => 'YOUR_API_KEY'));
 ```
 
 * Call a desired compression method
