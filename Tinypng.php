@@ -131,7 +131,7 @@ class Tinypng
 	 * $height (integer) height of new image
 	 */
 
-	public function fileResize($path, $new_path, $method, $width, $height)
+	public function fileResize($path, $new_path, $method, $width = 0, $height = 0)
 	{
 		try {
 			$source = \Tinify\fromFile($path);
@@ -141,9 +141,9 @@ class Tinypng
 				'height' => $height
 			);
 			if($method == 'scale') {
-				if($width = 0 && $height != 0)
+				if($width == 0 && $height != 0)
 					unset($array['width']);
-				else if($width != 0 && $height = 0)
+				else if($width != 0 && $height == 0)
 					unset($array['height']);
 				else
 					unset($array);
@@ -173,7 +173,7 @@ class Tinypng
 	 * $height (integer) height of new image
 	 */
 
-	public function bufferResize($path, $method, $width, $height)
+	public function bufferResize($path, $method, $width = 0, $height = 0)
 	{
 		try {
 			$array = array(
@@ -182,9 +182,9 @@ class Tinypng
 				'height' => $height
 			);
 			if($method == 'scale') {
-				if($width = 0 && $height != 0)
+				if($width == 0 && $height != 0)
 					unset($array['width']);
-				else if($width != 0 && $height = 0)
+				else if($width != 0 && $height == 0)
 					unset($array['height']);
 				else
 					unset($array);
@@ -216,7 +216,7 @@ class Tinypng
 	 * $height (integer) height of new image
 	 */
 
-	public function urlResize($url, $new_path, $method, $width, $height)
+	public function urlResize($url, $new_path, $method, $width = 0, $height = 0)
 	{
 		try {
 			$source = \Tinify\fromUrl($url);
@@ -226,9 +226,9 @@ class Tinypng
 				'height' => $height
 			);
 			if($method == 'scale') {
-				if($width = 0 && $height != 0)
+				if($width == 0 && $height != 0)
 					unset($array['width']);
-				else if($width != 0 && $height = 0)
+				else if($width != 0 && $height == 0)
 					unset($array['height']);
 				else
 					unset($array);
