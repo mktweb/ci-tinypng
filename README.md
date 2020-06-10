@@ -8,6 +8,7 @@ Library from CodeIgniter to extends tinypng
 
 ### Requirements
 * CodeIgniter 3.0 or higher
+* Not tested on CodeIgniter 4 yet
 
 ## How to Use
 * Call library in your Controller
